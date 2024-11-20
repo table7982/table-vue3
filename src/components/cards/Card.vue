@@ -9,19 +9,20 @@
       <div class="flip-card-back">
         <slot name="backTitle">FLIP CARD</slot>
         <slot name="backParagraph">Hover Me</slot>
-        <a class="btnLink button" :href="btnLink">
+        <router-link :to="btnLink" class="btnLink button">
           <span class="text">点我试试</span>
           <span class="blob"></span>
           <span class="blob"></span>
           <span class="blob"></span>
           <span class="blob"></span>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang='ts' name='Card'>
+import { RouterLink, RouterView } from 'vue-router'
 defineProps(['btnLink'])
 </script>
 

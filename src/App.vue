@@ -1,12 +1,12 @@
 <template>
   <!-- <h1>table</h1> -->
-  <Begin />
-  <CardContainer id="mySpace" />
+  <!-- <Index /> -->
+  <RouterView></RouterView>
 </template>
- 
+
 <script setup lang='ts' name='App'>
-import Begin from './components/index/Begin.vue';
-import CardContainer from './components/cards/CardContainer.vue'
+import { RouterLink, RouterView } from 'vue-router'
+import Index from './components/index/Index.vue';
 </script>
 
 <style scoped></style>
