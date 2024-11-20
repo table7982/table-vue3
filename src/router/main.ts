@@ -1,10 +1,10 @@
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Work from '@/components/pages/work/Work.vue'
 import Link from '@/components/pages/link/Link.vue'
 import Index from '@/components/index/Index.vue'
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',

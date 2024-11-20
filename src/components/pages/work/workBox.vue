@@ -1,7 +1,7 @@
 <template>
   <div class="midBox clearfix">
     <div class="imgBox clearfix">
-      <img :src="workListItem.imgLink" :alt="workListItem.title">
+      <img :src="road" :alt="workListItem.title">
       <div class="discribeBox clearfix">
         <div class="discribe">
           <h3>{{ workListItem.title }}</h3>
@@ -13,8 +13,11 @@
 </template>
 
 <script setup lang='ts' name='workBox'>
-defineProps(['workListItem'])
-
+import { ref } from 'vue';
+let workProps = defineProps(['workListItem'])
+console.log(workProps.workListItem.imgLink)
+let road = ref(workProps.workListItem.imgLink)
+console.log("000", road.value)
 </script>
 
 <style scoped>
