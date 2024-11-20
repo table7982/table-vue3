@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 内减模式 */
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+
+body {
+  background-color: rgba(238, 103, 97, 0.5);
+}
