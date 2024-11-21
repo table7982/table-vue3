@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <img src="../../../img/logo_white.png" class="logo">
+    <img src="../../../static/logo_white.png" class="logo">
     <div class="cover"></div>
-    <img src="../../../img/sliderMain.png" alt="移动图片" class="parallax-img" />
+    <img src="../../../static/sliderMain.png" alt="移动图片" class="parallax-img" />
     <div class="paragraph">
       <SliderBegin />
     </div>

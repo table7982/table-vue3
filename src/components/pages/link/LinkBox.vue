@@ -1,15 +1,15 @@
 <template>
   <div class="linksLogo">
     <a href="https://space.bilibili.com/1842925705?spm_id_from=333.1007.0.0" target="_blank">
-      <img src="../../../../img/linkImg/bilibili.png" alt="Bilibili">
+      <img src="../../../../static/linkImg/bilibili.png" alt="Bilibili">
       <p>Bilibili</p>
     </a>
     <a href="https://v.douyin.com/iAoT7NGD/ 9@8.com :4pm" target="_blank">
-      <img src="../../../../img/linkImg/tiktok.png" alt="抖音">
+      <img src="../../../../static/linkImg/tiktok.png" alt="抖音">
       <p>抖音</p>
     </a>
     <a href="https://github.com/table7982?tab=repositories" target="_blank">
-      <img src="../../../../img/linkImg/git.png" alt="Github">
+      <img src="../../../../static/linkImg/git.png" alt="Github">
       <p>Github</p>
     </a>
   </div>
