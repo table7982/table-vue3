@@ -1,7 +1,7 @@
 <template>
   <div class="midBox clearfix">
     <div class="imgBox clearfix">
-      <img :src="road" :alt="workListItem.title">
+      <img v-bind:src="workListItem.imgLink" :alt="workListItem.title">
       <div class="discribeBox clearfix">
         <div class="discribe">
           <h3>{{ workListItem.title }}</h3>
@@ -16,8 +16,7 @@
 import { ref } from 'vue';
 let workProps = defineProps(['workListItem'])
 console.log(workProps.workListItem.imgLink)
-let road = ref(workProps.workListItem.imgLink)
-console.log("000", road.value)
+
 </script>
 
 <style scoped>
