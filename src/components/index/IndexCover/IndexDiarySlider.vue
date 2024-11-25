@@ -26,8 +26,8 @@
 </template>
 
 <script setup lang='ts' name='IndexDiarySlider'>
-import { rSwiper, rSlide, refDom } from 'r-swiper'
-import { ref, watch } from 'vue';
+import { rSwiper, rSlide } from 'r-swiper'
+import { ref } from 'vue';
 const nowIndex = ref(0) // 当前下标
 
 const swiperDOM: any = ref(null) // Dom元素
