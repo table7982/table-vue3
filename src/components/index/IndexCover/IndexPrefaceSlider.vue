@@ -1,16 +1,20 @@
 <template>
-  <div class="carousel-container">
-    <Time class="time" />
-    <br>
-    <h3>前言</h3>
-    <div v-for="(paragraph, index) in paragraphList" :key="index"
-      :class="{ 'carousel-item': true, 'active': currentIndex === index }" @mouseenter="pauseCarousel"
-      @mouseleave="startCarousel">
-      <p>{{ paragraph.content }}</p>
-      <a :href="paragraph.link" target="_blank" class="sourseQuote">
-        <br>
-        <p>&mdash; {{ paragraph.source }}</p>
-      </a>
+  <img src="../../../../static/logo_white.png" class="logo">
+  <div class="paragraph">
+    <div class="carousel-container">
+      <IndexTime class="time" />
+
+      <br>
+      <h3>前言</h3>
+      <div v-for="(paragraph, index) in paragraphList" :key="index"
+        :class="{ 'carousel-item': true, 'active': currentIndex === index }" @mouseenter="pauseCarousel"
+        @mouseleave="startCarousel">
+        <p>{{ paragraph.content }}</p>
+        <a :href="paragraph.link" target="_blank" class="sourseQuote">
+          <br>
+          <p>&mdash; {{ paragraph.source }}</p>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +22,7 @@
 <script setup lang='ts' name='SliderBegin'>
 
 import { ref, onMounted, onUnmounted } from 'vue';
-import Time from './IndexCover/IndexTime.vue';
+import IndexTime from './IndexTime.vue';
 interface ParagraphInterface {
   id: string;
   content: string;
@@ -65,22 +69,34 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.paragraph {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 30%;
+  color: white;
+  font-size: 1.25rem;
+  z-index: 2;
+  text-shadow: 0px 0px 1px white;
+}
+
 .time {
   font-family: 'Courier New', Courier, monospace;
-  line-height: 20px;
-  font-size: 18px;
-  margin-bottom: 20px;
+  line-height: 1.25rem;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
 }
 
 .paragraph h3 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .sourseQuote {
   color: white;
   text-align: right;
+  font-size: 1rem;
 }
 
 .sourseQuote:hover {
@@ -106,5 +122,12 @@ onUnmounted(() => {
 .carousel-item.active {
   visibility: visible;
   opacity: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  z-index: 2;
 }
 </style>

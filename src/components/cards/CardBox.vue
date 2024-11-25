@@ -59,13 +59,13 @@ let spaceListItemS = props.spaceListItem[1]
 
 .cardBoxStyle {
   width: 50%;
-  height: 40em;
+  height: 40rem;
   float: left;
   /* background-color: yellow; */
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 2rem;
   font-weight: 900;
   text-align: center;
   margin: 0;

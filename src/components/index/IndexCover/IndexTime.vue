@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup lang='ts' name='Time'>
+<script setup lang='ts' name='IndexTime'>
 import { ref, onMounted, onUnmounted } from 'vue';
 
 // 定义响应式数据
@@ -31,7 +31,4 @@ onUnmounted(() => {
 
 <style scoped>
 /* 这里可以添加一些样式 */
-div {
-  font-family: Arial, sans-serif;
-}
 </style>

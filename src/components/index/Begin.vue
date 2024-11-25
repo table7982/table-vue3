@@ -6,7 +6,7 @@
     <div class="paragraph">
       <SliderBegin />
     </div>
-    <button class="btn" onclick="location.href='#mySpace'">TABLE的空间</button>
+    <button class="btn" @click="rollToSpace">TABLE的空间</button>
   </div>
 
 </template>
@@ -14,6 +14,19 @@
 <script setup lang='ts' name='Begin'>
 import { reactive } from 'vue'
 import SliderBegin from './SliderBegin.vue'
+
+
+function rollToSpace(event: any) {
+  // 阻止默认的链接跳转行为
+  event.preventDefault();
+  // 通过锚点跳转到指定位置
+  const target = document.querySelector('#mySpace');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+
 // 确保代码在 DOM 加载完成后执行
 document.addEventListener('DOMContentLoaded', () => {
   const img: any = document.querySelector('.parallax-img');

@@ -1,5 +1,4 @@
 <template>
-  <!-- <h1>table</h1> -->
   <!-- <Index /> -->
   <RouterView></RouterView>
 </template>

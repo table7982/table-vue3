@@ -21,17 +21,18 @@ console.log(workProps.workListItem.imgLink)
 
 <style scoped>
 .midBox {
-  margin-top: 4em;
+  margin-top: 4rem;
   display: flex;
-  justify-content: center;
 
-  padding-bottom: 4em;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 4rem;
   border-bottom: 0.1em solid white;
   /* background-color: #ccc; */
 }
 
 .imgBox {
-  width: 80%;
+  width: 90%;
 }
 
 .imgBox img {
@@ -40,10 +41,10 @@ console.log(workProps.workListItem.imgLink)
   /* 图片宽度设置为100% */
   height: auto;
   color: white;
-  border-radius: 3em;
-  box-shadow: 0 0 3em;
-  margin-right: 4em;
-  border: 0.3em solid white;
+  border-radius: 1.125rem;
+  box-shadow: 0 0 3rem;
+  margin-right: 4rem;
+  border: 0.3rem solid white;
   /* 高度自动，以保持图片的宽高比 */
   /* 其他样式，如边框、圆角等 */
 }
@@ -61,19 +62,20 @@ console.log(workProps.workListItem.imgLink)
 
 .imgBox .discribe {
   width: 100%;
-  height: 10em;
-  padding: 2em;
+  height: 10rem;
+  padding: 1rem;
   font-family: 'Courier New', Courier, monospace;
   color: white;
   /* background-color: red; */
-  border: 0.1em solid white;
-  border-radius: 1em;
-  box-shadow: 0 0 1em;
-  font-size: 1em;
+  border: 0.1rem solid white;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 1rem;
+  font-size: 2rem;
 }
 
 .imgBox .discribe h3 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 </style>
