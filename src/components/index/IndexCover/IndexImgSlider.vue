@@ -34,11 +34,11 @@ let { getImageColor } = useIndexMianColor()
 window.addEventListener('load', function () {
   let img1 = document.querySelector('#SuPicture') as HTMLInputElement | null;
   let rgbcolor1 = getImageColor(img1, 'id1')
-  let cover1 = document.querySelector('#cover1') as HTMLCollectionOf<HTMLElement> | null
+  let cover1: any = document.querySelector('#cover1') as HTMLCollectionOf<HTMLElement> | null
   cover1.style.setProperty('background-color', rgbcolor1);
   let img2 = document.querySelector('#SuStation') as HTMLInputElement | null;
   let rgbcolor2 = getImageColor(img2, 'id2')
-  let cover2 = document.querySelector('#cover2') as HTMLCollectionOf<HTMLElement> | null
+  let cover2: any = document.querySelector('#cover2') as HTMLCollectionOf<HTMLElement> | null
   cover2.style.setProperty('background-color', rgbcolor2);
 });
 
