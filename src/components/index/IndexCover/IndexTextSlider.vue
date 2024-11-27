@@ -28,8 +28,8 @@ const IndexTextSliderData = [
 <style scoped>
 .screenAbsolutePosition {
   position: absolute;
-  bottom: 5%;
-  right: 10%;
+  bottom: 15%;
+  right: 12%;
   /* width: 1rem; */
   height: 18rem;
   /* background-color: pink; */
@@ -44,7 +44,7 @@ const IndexTextSliderData = [
 
 .textItemStyle {
   position: absolute;
-  font-size: 1.75rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: bolder;
   font-family: 'Courier New', Courier, monospace;

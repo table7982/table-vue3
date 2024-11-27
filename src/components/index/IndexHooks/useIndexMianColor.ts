@@ -1,6 +1,7 @@
 export default function () {
+
   function getImageColor(img: any, id: string) {
-    let canvas = document.createElement('canvas');
+    let canvas: any = document.createElement('canvas');
     canvas.id = id
     canvas.width = img.width;
     canvas.height = img.height;
@@ -10,6 +11,7 @@ export default function () {
     let skipNumRol = canvas.height / 15
     skipNumCol = Math.round(skipNumCol)
     skipNumRol = Math.round(skipNumRol)
+    // console.log(img)
     let context: any = canvas.getContext("2d");
 
     context.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -33,17 +35,20 @@ export default function () {
           b += data[((img.width * row) + col) * 4 + 2];
         }
         cnt++
+        // console.log(r, g, b)
         col += skipNumCol
       }
       row += skipNumRol
     }
     console.log(cnt, '运行了这些次。')
-    console.log(r, g, b)
+    // console.log(r, g, b)
     // 求取平均值
-    r /= (img.width * img.height);
-    g /= (img.width * img.height);
-    b /= (img.width * img.height);
-
+    // r /= (img.width * img.height);
+    // g /= (img.width * img.height);
+    // b /= (img.width * img.height);
+    r /= cnt;
+    g /= cnt;
+    b /= cnt;
     // 将最终的值取整
     r = Math.round(r);
     g = Math.round(g);

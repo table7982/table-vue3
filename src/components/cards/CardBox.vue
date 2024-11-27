@@ -53,6 +53,7 @@ let spaceListItemS = props.spaceListItem[1]
 <style scoped>
 .cardAll {
   width: 100%;
+  
   /* height: 50em; */
   /* overflow: hidden; */
 }
@@ -61,6 +62,7 @@ let spaceListItemS = props.spaceListItem[1]
   width: 50%;
   height: 40rem;
   float: left;
+  
   /* background-color: yellow; */
 }
 

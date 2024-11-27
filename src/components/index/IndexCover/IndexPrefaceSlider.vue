@@ -73,7 +73,7 @@ onUnmounted(() => {
   position: absolute;
   top: 30%;
   left: 5%;
-  width: 30%;
+  width: 45%;
   color: white;
   font-size: 1.25rem;
   z-index: 2;
@@ -82,21 +82,21 @@ onUnmounted(() => {
 
 .time {
   font-family: 'Courier New', Courier, monospace;
-  line-height: 1.25rem;
-  font-size: 1.125rem;
+  line-height: 1.8rem;
+  font-size: 1.8rem;
   margin-bottom: 1.25rem;
 }
 
 .paragraph h3 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin-bottom: 1.25rem;
 }
 
 .sourseQuote {
   color: white;
   text-align: right;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .sourseQuote:hover {
@@ -113,6 +113,7 @@ onUnmounted(() => {
 
 .carousel-item {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
   position: absolute;
   visibility: hidden;
   opacity: 0;

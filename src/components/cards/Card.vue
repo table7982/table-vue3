@@ -151,7 +151,7 @@ defineProps(['btnLink'])
 .flip-card-front,
 .flip-card-back {
   font-size: 1.5rem;
-  box-shadow: 0 .5rem .875rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .5rem .875rem 0 rgba(255, 255, 255, 0.7);
   position: absolute;
   display: flex;
   flex-direction: column;
