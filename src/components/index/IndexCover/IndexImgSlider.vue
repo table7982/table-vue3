@@ -28,23 +28,37 @@
 <script setup lang='ts' name='IndexDiarySlider'>
 
 import useIndexMianColor from '../IndexHooks/useIndexMianColor'
-
 let { getImageColor } = useIndexMianColor()
 
-window.addEventListener('load', function () {
+function changeColor() {
   let img1 = document.querySelector('#SuPicture') as HTMLInputElement | null;
   let rgbcolor1 = getImageColor(img1, 'id1')
-  let cover1: any = document.querySelector('#cover1') as HTMLCollectionOf<HTMLElement> | null
+  var cover1: any = document.querySelector('#cover1') as HTMLCollectionOf<HTMLElement> | null
   cover1.style.setProperty('background-color', rgbcolor1);
   let img2 = document.querySelector('#SuStation') as HTMLInputElement | null;
   let rgbcolor2 = getImageColor(img2, 'id2')
   let cover2: any = document.querySelector('#cover2') as HTMLCollectionOf<HTMLElement> | null
   cover2.style.setProperty('background-color', rgbcolor2);
+}
+
+window.addEventListener('load', function () {
+  changeColor()
 });
+
+
+
 
 
 import { rSwiper, rSlide } from 'r-swiper'
 import { ref, watch, onMounted } from 'vue';
+
+onMounted(() => {
+  console.log('该组件挂载了！')
+  changeColor()
+})
+
+
+
 const nowIndex = ref(0) // 当前下标
 
 const swiperDOM: any = ref(null) // Dom元素
