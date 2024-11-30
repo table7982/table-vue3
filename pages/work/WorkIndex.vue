@@ -11,10 +11,10 @@
 <script setup lang='ts' name='WorkIndex'>
 import Head from './Head.vue';
 import workBox from './workBox.vue';
-const imgUrl0 = new URL('../../../../static/workImg/selfImg.png', import.meta.url).href
-const imgUrl1 = new URL('../../../../static/workImg/customImgBoy.png', import.meta.url).href
-const imgUrl2 = new URL('../../../../static/workImg/customImgGirl.png', import.meta.url).href
-const imgUrl3 = new URL('../../../../static/workImg/Drawing1.png', import.meta.url).href
+const imgUrl0 = new URL('../../static/workImg/SelfImg.png', import.meta.url).href
+const imgUrl1 = new URL('../../static/workImg/customImgBoy.png', import.meta.url).href
+const imgUrl2 = new URL('../../static/workImg/customImgGirl.png', import.meta.url).href
+const imgUrl3 = new URL('../../static/workImg/Drawing1.png', import.meta.url).href
 const workList = [
   { title: '自画像', discribe: '我的自画像', imgLink: imgUrl0 },
   { title: '服装设计', discribe: '一个男装设计', imgLink: imgUrl1 },

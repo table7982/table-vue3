@@ -2,7 +2,7 @@
   <div class="cardAll">
     <div class="cardBoxStyle">
       <div class="cardBox left">
-        <Card class="cardItemLeft" :btnLink='spaceListItemF.btnLink'>
+        <IndexCardItem class="cardItemLeft" :btnLink='spaceListItemF.btnLink'>
           <template v-slot:title>
             <p class="title">{{ spaceListItemF.title }}</p>
           </template>
@@ -15,12 +15,12 @@
           <template v-slot:backParagraph>
             <p>{{ spaceListItemF.backDiscribe }}</p>
           </template>
-        </Card>
+        </IndexCardItem>
       </div>
     </div>
     <div class="cardBoxStyle">
       <div class="cardBox right">
-        <Card class="cardItemRight" :btnLink='spaceListItemS.btnLink'>
+        <IndexCardItem class="cardItemRight" :btnLink='spaceListItemS.btnLink'>
           <template v-slot:title>
             <p class="title">{{ spaceListItemS.title }}</p>
           </template>
@@ -33,27 +33,27 @@
           <template v-slot:backParagraph>
             <p>{{ spaceListItemS.backDiscribe }}</p>
           </template>
-        </Card>
+        </IndexCardItem>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang='ts' name='CardBox'>
-import Card from './Card.vue';
+<script setup lang='ts' name='IndexCard'>
+import IndexCardItem from './IndexCardItem.vue';
 const props: any = defineProps({
   spaceListItem: Array
 });
-console.log(props.spaceListItem[0]);
-console.log(props.spaceListItem[1]);
+
 let spaceListItemF = props.spaceListItem[0]
 let spaceListItemS = props.spaceListItem[1]
+console.log(spaceListItemF)
 </script>
 
 <style scoped>
 .cardAll {
   width: 100%;
-  
+
   /* height: 50em; */
   /* overflow: hidden; */
 }
@@ -62,7 +62,7 @@ let spaceListItemS = props.spaceListItem[1]
   width: 50%;
   height: 40rem;
   float: left;
-  
+
   /* background-color: yellow; */
 }
 

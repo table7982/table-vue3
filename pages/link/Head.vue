@@ -3,7 +3,6 @@
     <div class="headBox">
       个人链接
     </div>
-
   </div>
 
 </template>

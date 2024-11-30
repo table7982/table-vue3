@@ -1,12 +1,11 @@
 <template>
   <IndexCover />
-  <CardContainer id="mySpace" />
+  <IndexCardsContainer />
 </template>
 
 <script setup lang='ts' name='App'>
 import IndexCover from './IndexCover/IndexCover.vue'
-import Begin from '../index/Begin.vue';
-import CardContainer from '../cards/CardContainer.vue'
+import IndexCardsContainer from './IndexCards/IndexCardsContainer.vue';
 </script>
 
 <style scoped></style>
