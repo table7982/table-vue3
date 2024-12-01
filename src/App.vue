@@ -1,6 +1,6 @@
 <template>
-  <!-- <Index /> -->
   <RouterView></RouterView>
+   
 </template>
 
 <script setup lang='ts' name='App'>

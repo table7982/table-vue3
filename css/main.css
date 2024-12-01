@@ -28,7 +28,9 @@ a {
 
 
 body {
-  background-color: #e1abab;
+  background-image: url(../static/bgImg.png);
+  background-attachment: fixed;
+
 }
 
 

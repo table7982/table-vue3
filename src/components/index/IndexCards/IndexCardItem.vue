@@ -9,13 +9,13 @@
       <div class="flip-card-back">
         <slot name="backTitle">FLIP CARD</slot>
         <slot name="backParagraph">Hover Me</slot>
-        <router-link :to="btnLink" class="btnLink button">
+        <RouterLink :to="btnLink" class="btnLink button">
           <span class="text">点我试试</span>
           <span class="blob"></span>
           <span class="blob"></span>
           <span class="blob"></span>
           <span class="blob"></span>
-        </router-link>
+        </RouterLink>
       </div>
     </div>
   </div>

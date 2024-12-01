@@ -11,7 +11,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        link: resolve(__dirname, 'pages/link/index.html'),
       },
     },
     outDir: 'docs'

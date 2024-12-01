@@ -1,4 +1,5 @@
 <template>
+  <Header />
 
   <Head />
   <LinkBox />
@@ -6,6 +7,7 @@
 <script setup lang='ts' name='Link'>
 import Head from './Head.vue';
 import LinkBox from './LinkBox.vue';
+import Header from '@/components/header/Header.vue';
 </script>
 
 <style scoped></style>
