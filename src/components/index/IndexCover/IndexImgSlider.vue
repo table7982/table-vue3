@@ -49,7 +49,7 @@ window.addEventListener('load', function () {
 
 
 
-import { rSwiper, rSlide } from 'r-swiper'
+import { rSwiper, rSlide } from 'r-swiper';
 import { ref, watch, onMounted } from 'vue';
 
 onMounted(() => {
@@ -132,13 +132,13 @@ ImgMove('.moveContainer3', '.moveImg3')
     background-size: cover;
   }
 
-  .box2 {
+  /* .box2 {
     background-image: url('./2.png')
   }
 
   .box3 {
     background-image: url('./3.png')
-  }
+  } */
 }
 
 .parallax-img {
