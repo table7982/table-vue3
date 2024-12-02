@@ -1,14 +1,15 @@
 <template>
   <div class="headContainer">
     <div class="headBox">
-      个人链接
+      {{ title }}
     </div>
+
   </div>
 
 </template>
 
 <script setup lang='ts' name='Head'>
-
+defineProps(['title'])
 </script>
 
 <style scoped>

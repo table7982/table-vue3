@@ -178,3 +178,6 @@ defineProps(['btnLink'])
   transform: rotateY(180deg);
 }
 </style>
+
+<!-- http://localhost:5173/table-vue3/#/diarylist -->
+ <!-- http://localhost:5173/table-vue3/#/dairylist -->

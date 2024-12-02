@@ -1,6 +1,6 @@
 <template>
 
-  <Head />
+  <Head title="小小作品" />
   <workBox :workListItem='workList[4]' />
   <workBox :workListItem='workList[0]' />
   <workBox :workListItem='workList[1]' />
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang='ts' name='WorkIndex'>
-import Head from './Head.vue';
+import Head from '@/components/header/Head.vue';
 import workBox from './workBox.vue';
 const imgUrl0 = new URL('../../../../static/workImg/SelfImg.png', import.meta.url).href
 const imgUrl1 = new URL('../../../../static/workImg/customImgBoy.png', import.meta.url).href

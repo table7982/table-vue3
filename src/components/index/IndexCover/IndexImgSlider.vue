@@ -46,9 +46,6 @@ window.addEventListener('load', function () {
 });
 
 
-
-
-
 import { rSwiper, rSlide } from 'r-swiper';
 import { ref, watch, onMounted } from 'vue';
 

@@ -17,6 +17,9 @@
         <RouterLink to="/link" class="link-style">
           <p class="text">小小足迹</p>
         </RouterLink>
+        <RouterLink to="/diarylist" class="link-style">
+          <p class="text">小小日记</p>
+        </RouterLink>
       </div>
     </div>
   </div>
@@ -45,10 +48,10 @@ function changeSituation() {
   flex-direction: column;
   text-align: right;
   right: 1rem;
-  width: 12rem;
+  width: 14rem;
   text-align: right;
   font-size: 3rem;
-
+  z-index: 200;
   color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -77,6 +80,7 @@ function changeSituation() {
   color: #5d5d5d;
   transform-origin: center;
   transform: rotate(90deg);
+  opacity: 0;
   transition: all 0.2s ease-in-out;
 }
 
