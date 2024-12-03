@@ -23,7 +23,7 @@ emitter.on('sendSliderNewValue', (value: any) => {
 
 
 const IndexTextSliderData = [
-  { id: 0, text: '给秋天一个约定', link_id: 'id01' },
+  { id: 0, text: '关于设计', link_id: 'id01' },
   { id: 1, text: '苏州一日行', link_id: 'id02' },
   { id: 2, text: '写点什么', link_id: 'id03' }
 ]

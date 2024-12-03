@@ -4,6 +4,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { resolve } from 'path'
+import Markdown from 'unplugin-vue-markdown/vite'
+import prism from 'markdown-it-prism'
+import { unheadVueComposablesImports } from '@unhead/vue'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/table-vue3/',
@@ -24,6 +27,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  
 })
 
 

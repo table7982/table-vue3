@@ -5,7 +5,6 @@ import Link from '@/components/pages/link/Link.vue'
 import Index from '@/components/index/Index.vue'
 import DiaryList from '@/components/pages/diary/DiaryList.vue'
 import DiaryItem from '@/components/pages/diary/diaryitem/DiaryItem.vue'
-import Diaryid01 from '@/components/pages/diary/diaryitem/diary_page/Diaryid01.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
