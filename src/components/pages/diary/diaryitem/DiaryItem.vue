@@ -39,7 +39,7 @@ async function loadAndRenderMarkdown() {
     ref_result.value = '指定的Markdown文件不存在';
   }
 }
-
+console.log(0)
 // 使用onMounted钩子来在组件挂载后加载Markdown
 onMounted(loadAndRenderMarkdown);
 
