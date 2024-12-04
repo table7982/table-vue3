@@ -106,6 +106,7 @@ onMounted(loadAndRenderMarkdown);
   margin: 0 auto;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 @media (max-width: 767px) {
