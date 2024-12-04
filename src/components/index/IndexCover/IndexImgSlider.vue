@@ -1,34 +1,35 @@
 <template>
   <div class="home-style">
-    <rSwiper fast :autoPlay='true' ref="swiperDOM" class="swiper" :indicatorFlash='true' playTime=6000
-      @loadEnd="funLoadEnd" @transitionend="funTransitionend">
-      <rSlide>
+    <el-carousel class="swiper" height="100vh" @change="handleCarouselChange">
+      <el-carousel-item>
         <div class="container moveContainer1">
           <div class="cover" id="cover1"></div>
           <img src="../../../../static/SuPicture.jpg" alt="移动图片" class="parallax-img moveImg1" id="SuPicture" />
         </div>
-      </rSlide>
-      <rSlide>
+      </el-carousel-item>
+      <el-carousel-item>
         <div class="container moveContainer2">
           <div class="cover" id="cover2"></div>
           <img src="../../../../static/SuStation.jpg" alt="苏州站" class="parallax-img moveImg2" id="SuStation" />
         </div>
-      </rSlide>
-      <rSlide>
+      </el-carousel-item>
+      <el-carousel-item>
         <div class="container moveContainer3">
           <div class="cover" id="cover3"></div>
           <img src="../../../../static/sliderMain.png" alt="首页图片" class="parallax-img moveImg3" id="sliderMain" />
         </div>
-      </rSlide>
-    </rSwiper>
+      </el-carousel-item>
+    </el-carousel>
   </div>
 
 </template>
 
 <script setup lang='ts' name='IndexDiarySlider'>
-
+import { nextTick } from 'vue';
 import useIndexMianColor from '../IndexHooks/useIndexMianColor'
 let { getImageColor } = useIndexMianColor()
+
+
 
 function changeColor() {
   let img1 = document.querySelector('#SuPicture') as HTMLInputElement | null;
@@ -41,64 +42,64 @@ function changeColor() {
   cover2.style.setProperty('background-color', rgbcolor2);
 }
 
-window.addEventListener('load', function () {
-  changeColor()
-});
+// window.addEventListener('load', function () {
+//   changeColor()
+// });
 
 
-import { rSwiper, rSlide } from 'r-swiper';
 import { ref, watch, onMounted } from 'vue';
+import useIndexImgMove from '../IndexHooks/useIndexImgMove';
+import emitter from '@/utils/emitter';
+
+const imgUrl0 = new URL('../../../../static/SuPicture.jpg', import.meta.url).href
+const imgUrl1 = new URL('../../../../static/SuStation.jpg', import.meta.url).href
+const imgUrl2 = new URL('../../../../static/sliderMain.png', import.meta.url).href
+// 定义图片 URL 数组
+const imageUrls = [imgUrl0, imgUrl1, imgUrl2];
+
+function loadImage(url: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = url;
+  });
+}
 
 onMounted(() => {
   console.log('该组件挂载了！')
-  changeColor()
+  nextTick(() => {
+
+
+    Promise.all([
+      loadImage(imageUrls[0]),
+      loadImage(imageUrls[1]),
+      loadImage(imageUrls[2]),
+    ])
+      .then((images) => {
+        // 所有图片加载完成后执行的操作
+        console.log("所有图片加载完成");
+        changeColor()
+        // 可以在这里处理图片数组，比如将它们显示在页面上
+
+      })
+      .catch((error) => {
+        console.error("图片加载失败: ", error);
+      });
+  });
 })
 
 
 
-const nowIndex = ref(0) // 当前下标
+let nowIndex = ref(0) // 当前下标
 
-const swiperDOM: any = ref(null) // Dom元素
 
-/**
- * 2023-12-18 08:52:05 Ywr
- * 初始化加载完成反馈函数
-*/
-const funLoadEnd = () => {
-  console.log('loading - success');
-  // changePage(2, true)
-  // swiperDOM.slideTo(2)
-  // nowIndex.value = 2
-  emitter.emit('sendSliderNewValue', nowIndex.value)
 
+
+function handleCarouselChange(newIndex: number, oldIndex: number) {
+  console.log(newIndex)
+  nowIndex.value = newIndex
 }
-
-/**
- * 2023-08-12 19:23:06 Ywr
- * 切换页面完成反馈函数
- * @param {Number} i 当前下标
-*/
-const funTransitionend = (i: any) => {
-  nowIndex.value = i
-  console.log('当前下标', nowIndex.value)
-}
-
-/**
- * 2023-08-12 19:23:06 Ywr
- * 切换页函数
- * @param {Number} i 下标
- * @param {Boolean} st 当前下标
-*/
-const changePage = (i: any, st = false) => {
-  // 如果是跳转到某页
-  if (st) {
-    swiperDOM.value.slideTo(i)
-  }
-  else {
-    i < 0 ? (swiperDOM.value.prev()) : (swiperDOM.value.next())
-  }
-}
-
 
 watch(nowIndex, (newSliderIndexValue) => {
   emitter.emit('sendSliderNewValue', newSliderIndexValue)
@@ -107,8 +108,7 @@ watch(nowIndex, (newSliderIndexValue) => {
 
 
 
-import useIndexImgMove from '../IndexHooks/useIndexImgMove';
-import emitter from '@/utils/emitter';
+
 let { ImgMove } = useIndexImgMove()
 ImgMove('.moveContainer1', '.moveImg1')
 ImgMove('.moveContainer2', '.moveImg2')
@@ -122,20 +122,11 @@ ImgMove('.moveContainer3', '.moveImg3')
   width: 100vw;
   height: 100vh;
 
-  .box {
-    width: 100vw;
-    height: 100vh;
-    background: url('../../../../static/sliderMain.png') no-repeat center center;
-    background-size: cover;
-  }
+}
 
-  /* .box2 {
-    background-image: url('./2.png')
-  }
-
-  .box3 {
-    background-image: url('./3.png')
-  } */
+.swiper {
+  width: 100%;
+  height: 100vh;
 }
 
 .parallax-img {

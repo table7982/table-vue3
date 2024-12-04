@@ -1,7 +1,7 @@
 <template>
 
   <Head title="小小作品" />
-  <workBox :workListItem='workList[4]' />
+
   <workBox :workListItem='workList[0]' />
   <workBox :workListItem='workList[1]' />
   <workBox :workListItem='workList[2]' />

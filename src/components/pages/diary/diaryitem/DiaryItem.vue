@@ -1,10 +1,21 @@
 <template>
   <Header />
 
-  <Head title="小小日记" />
-  <!-- {{ diaryMessage.diary_title }} -->
+  <Head :title="DiaryTitle" />
+  <br>
+  <!-- <img :src="DiaryImgUrl" alt="" class="coverImg"> -->
+  <div class="markdown-body">
+    <el-image style="width: 100%; " :src="DiaryImgUrl" fit="full" />
+    {{ DiaryTime }}
+    <br>
+    {{ DiaryDiscribe }}
+  </div>
+  <!-- <el-image loading="lazy" :src="">
+
+  </el-image> -->
   <div v-html="ref_result" class="markdown-body" style="font-size:medium"></div>
 </template>
+
 
 <script setup lang='ts' name='DiaryItem'>
 
@@ -13,11 +24,10 @@ import Head from '@/components/header/Head.vue';
 import { useRoute } from 'vue-router';
 import MarkdownIt from 'markdown-it';
 import 'github-markdown-css';
-import { ref, onMounted } from 'vue';
-const props = defineProps(['diaryMessage'])
-console.log(props)
+import { ref, onMounted, watch } from 'vue';
+
 const route = useRoute();
-const param_id = route.params.id; // 假设路由参数名为id
+const param_id = route.params.id;
 
 // 使用ref创建一个响应式变量来存储结果
 const ref_result = ref<string | null>(null);
@@ -40,60 +50,53 @@ async function loadAndRenderMarkdown() {
   }
 }
 console.log(0)
+
+
+let DiaryListMessage = {}
+import emitter from '@/utils/emitter';
+let param_id_string = String(param_id);
+function sentDiaryId() {
+  emitter.emit('diaryIdChange', param_id_string)
+}
+
 // 使用onMounted钩子来在组件挂载后加载Markdown
-onMounted(loadAndRenderMarkdown);
+onMounted(() => {
+  loadAndRenderMarkdown();
+  sentDiaryId();
+});
+let diaryDetailMessage: any = ref(null)
+emitter.on('sentDiaryImgUrl', (DetailMessage: any) => {
+  diaryDetailMessage.value = DetailMessage
+  console.log(diaryDetailMessage.value.img_url)
+})
+
+
+const defaultImgUrl = new URL('../../../../../static/sliderMain.png', import.meta.url).href
+
+const DiaryTitle = ref('Hello!')
+const DiaryTime = ref('NICE2035')
+const DiaryImgUrl = ref(defaultImgUrl)
+const DiaryDiscribe = ref('你没有从小小日记界面进入哦！')
+
+
+watch(diaryDetailMessage, () => {
+  emitter.off('sentDiaryImgUrl')
+  console.log('注销了')
+  console.log('函数外面的', diaryDetailMessage.value.diary_title)
+  DiaryTitle.value = diaryDetailMessage.value.diary_title
+  DiaryTime.value = diaryDetailMessage.value.diary_time
+  DiaryImgUrl.value = diaryDetailMessage.value.img_url
+  DiaryDiscribe.value = diaryDetailMessage.value.diary_discribe
+})
 
 
 
 
-// import Header from '@/components/header/Header.vue';
-// import Head from '@/components/header/Head.vue';
-// import { useRoute } from 'vue-router';
-// import MarkdownIt from 'markdown-it'
-// import 'github-markdown-css';
+// emitter.on('sentDiaryImgUrl', (value: any) => {
+//   console.log('sendSliderNewValue被触发', value)
 
-// import { watchEffect, computed, ref, shallowRef } from 'vue';
-// import router from '@/router/main';
-
-
-// const route = useRoute();
-// const param_id = route.params.id; // 假设路由参数名为id
-// let md = '# 加载中'
-
-// // console.log(param_id)
-// let param_id_string: string = param_id as string
-// let modules = import.meta.glob('./md_diary/**/*.md', { as: 'raw' })
-// let full_path = `./md_diary/${param_id_string}.md`
-// modules[full_path]().then((mod) => {
-//   md = mod
 // })
-// console.log(modules[full_path]())
-// let randerContainer = new MarkdownIt();
-// let result = randerContainer.render(md); //传入文本
-// let ref_result = ref(result)
-// console.log(ref_result.value)
 
-
-
-// const currentName: any = computed(() => {
-//   return route.params.id;
-// });
-// let diary_url: string = ''
-// watchEffect(() => {
-//   if (route.path.startsWith('/diaryitem/')) {
-//     diary_url = `./md_diary/${currentName.value}'.md?raw`
-
-//   }
-// });
-// let md = 'null' as string
-
-// var result = ''
-// function mdShow(md_name: string) {
-
-// }
-
-// mdShow(param_id_string)
-// console.log('***', md)
 
 
 </script>
@@ -113,5 +116,13 @@ onMounted(loadAndRenderMarkdown);
   .markdown-body {
     padding: 15px;
   }
+}
+
+.imgContainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  /* 确保img是块级元素 */
 }
 </style>

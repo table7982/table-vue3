@@ -5,8 +5,8 @@ export default function () {
     canvas.id = id
     canvas.width = img.width;
     canvas.height = img.height;
-    // console.log(canvas.height)
-    // console.log(canvas.width)
+    console.log('canvas的高度是:', canvas.height)
+    console.log('canvas的宽度是:', canvas.width)
     let skipNumCol = canvas.width / 15
     let skipNumRol = canvas.height / 15
     skipNumCol = Math.round(skipNumCol)
