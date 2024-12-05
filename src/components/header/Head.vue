@@ -21,8 +21,9 @@ defineProps(['title'])
 }
 
 .headBox {
-  width: 5em;
-  font-size: 2em;
+  width: 10em;
+  font-size: 2.5em;
+  line-height: 4rem;
   text-align: center;
   margin: 0.8em;
   color: white;

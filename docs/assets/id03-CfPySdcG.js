@@ -6,7 +6,7 @@ const r=`# 前言\r
 \r
 在本科的最后一年，对我而言是比较轻松的一个学年，很多人选择了旅游，拍照，看世界，发在朋友圈里面的照片也绝美。但是我觉得我还是有很多更重要的事情去做，当然还有一定原因是我穷๑ᵒᯅᵒ๑。\r
 \r
-这个更重要的事情有很多很多，锻炼身体、学习物理、学习计算机、提前接触科研、找个实习、做个创业计划。但是正像我非常喜欢的一位教授在他的视频文案中说的——Too many interesting things to learn,too few time.\r
+这个更重要的事情有很多很多，锻炼身体、学习物理、学习计算机、提前接触科研、找个实习、做个创业计划、长长头发U・ᴥ・U。但是正像我非常喜欢的一位教授在他的视频文案中说的——Too many interesting things to learn,too few time.\r
 \r
 这一年轻松的时间太短了，短到都来不及细细思考，可能思考了也没用，我总会做出一个后悔的选择，因为无论选择什么都会后悔，能抓住的只有利用好时间，把一个后悔的选择做下去。\r
 \r
@@ -28,40 +28,39 @@ const r=`# 前言\r
 \r
 ## 引用和说明\r
 \r
-### 教程：\r
+### 教程\r
 \r
-[尚硅谷Vue3入门到实战，最新版vue3+TypeScript前端开发教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Za4y1r7KE?spm_id_from=333.788.videopod.episodes&vd_source=d8731095ca7745d789cdf83e49855df0)\r
+[尚硅谷Vue3入门到实战 - 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Za4y1r7KE?spm_id_from=333.788.videopod.episodes&vd_source=d8731095ca7745d789cdf83e49855df0)\r
 \r
-[JavaScript前端课程-dom-bom-js-es6新语法-jQuery-数据可视化echarts黑马pink老师前端入门基础视频教程(500多集)持续_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Sy4y1C7ha?spm_id_from=333.788.videopod.episodes&vd_source=d8731095ca7745d789cdf83e49855df0)\r
+[黑马pink老师前端入门基础视频教程 - 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Sy4y1C7ha?spm_id_from=333.788.videopod.episodes&vd_source=d8731095ca7745d789cdf83e49855df0)\r
 \r
-[黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV14J4114768?spm_id_from=333.788.videopod.episodes&vd_source=d8731095ca7745d789cdf83e49855df0)\r
+[黑马pink老师前端入门教程 h5(html5)+css3+移动端前端视频教程 - 哔哩哔哩_bilibili](https://www.bilibili.com/video/BV14J4114768?spm_id_from=333.788.videopod.episodes&vd_source=d8731095ca7745d789cdf83e49855df0)\r
 \r
 [Kimi.ai - 会推理解析，能深度思考的AI助手](https://kimi.moonshot.cn/)\r
 \r
-### 技术使用：\r
+### 技术使用\r
 \r
 #### 技术栈\r
 \r
 VUE3 TS JS HTML CSS\r
 \r
-#### 开源技术：\r
+#### 开源技术\r
 \r
 Element Plus：[一个 Vue 3 UI 框架 | Element Plus](https://element-plus.org/zh-CN/)\r
 \r
-r-swiper：[r-swiper: r-swiper vue3版本 含有禁止滑动块、快速连播模式，完美解决移动/PC端轮播需求](https://gitee.com/yan_wen_ran/r-swiper)\r
+r-swiper：[r-swiper: r-swiper vue3版本](https://gitee.com/yan_wen_ran/r-swiper)\r
 \r
-### 资源引用：\r
+### 资源引用\r
 \r
 《三体》——刘慈欣\r
 \r
 《十日终焉》——杀虫队队员\r
 \r
+《若月亮没来》：[若月亮没来 - 百度百科](https://baike.baidu.com/item/%E8%8B%A5%E6%9C%88%E4%BA%AE%E6%B2%A1%E6%9D%A5/64384473)\r
+\r
 J-Pierre：[J-Pierre的抖音 - 抖音](https://www.douyin.com/user/MS4wLjABAAAAKU25h1oxuGOimLug0RlerRsrY6x2ZRC-u9h7rCNfUAs)\r
 \r
-### 说明：\r
+### 说明\r
 \r
 本网站无后端，不会记录任何数据，星星仅为装饰，感谢访问本站，祝您生活愉快。\r
-\r
-\r
-\r
 `;export{r as default};

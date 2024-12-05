@@ -2,9 +2,9 @@
   <div class="home-style">
     <el-carousel class="swiper" height="100vh" @change="handleCarouselChange">
       <el-carousel-item>
-        <div class="container moveContainer1">
-          <div class="cover" id="cover1"></div>
-          <img src="../../../../static/SuPicture.jpg" alt="移动图片" class="parallax-img moveImg1" id="SuPicture" />
+        <div class="container moveContainer3">
+          <div class="cover" id="cover3"></div>
+          <img src="../../../../static/sliderMain.png" alt="首页图片" class="parallax-img moveImg3" id="sliderMain" />
         </div>
       </el-carousel-item>
       <el-carousel-item>
@@ -14,11 +14,13 @@
         </div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="container moveContainer3">
-          <div class="cover" id="cover3"></div>
-          <img src="../../../../static/sliderMain.png" alt="首页图片" class="parallax-img moveImg3" id="sliderMain" />
+        <div class="container moveContainer1">
+          <div class="cover" id="cover1"></div>
+          <img src="../../../../static/SuPicture.jpg" alt="移动图片" class="parallax-img moveImg1" id="SuPicture" />
         </div>
       </el-carousel-item>
+
+
     </el-carousel>
   </div>
 
@@ -113,7 +115,6 @@ let { ImgMove } = useIndexImgMove()
 ImgMove('.moveContainer1', '.moveImg1')
 ImgMove('.moveContainer2', '.moveImg2')
 ImgMove('.moveContainer3', '.moveImg3')
-
 
 </script>
 

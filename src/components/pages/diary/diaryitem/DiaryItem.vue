@@ -5,7 +5,7 @@
   <br>
   <!-- <img :src="DiaryImgUrl" alt="" class="coverImg"> -->
   <div class="markdown-body">
-    <el-image style="width: 100%; " :src="DiaryImgUrl" fit="full" />
+    <el-image style="width: 100%; " :src="DiaryImgUrl" fit="fill" />
     {{ DiaryTime }}
     <br>
     {{ DiaryDiscribe }}
@@ -52,50 +52,32 @@ async function loadAndRenderMarkdown() {
 console.log(0)
 
 
-let DiaryListMessage = {}
-import emitter from '@/utils/emitter';
-let param_id_string = String(param_id);
-function sentDiaryId() {
-  emitter.emit('diaryIdChange', param_id_string)
-}
+
 
 // 使用onMounted钩子来在组件挂载后加载Markdown
 onMounted(() => {
   loadAndRenderMarkdown();
-  sentDiaryId();
 });
-let diaryDetailMessage: any = ref(null)
-emitter.on('sentDiaryImgUrl', (DetailMessage: any) => {
-  diaryDetailMessage.value = DetailMessage
-  console.log(diaryDetailMessage.value.img_url)
-})
-
 
 const defaultImgUrl = new URL('../../../../../static/sliderMain.png', import.meta.url).href
 
 const DiaryTitle = ref('Hello!')
 const DiaryTime = ref('NICE2035')
 const DiaryImgUrl = ref(defaultImgUrl)
-const DiaryDiscribe = ref('你没有从小小日记界面进入哦！')
+const DiaryDiscribe = ref('出现了一些问题哦~')
 
-
-watch(diaryDetailMessage, () => {
-  emitter.off('sentDiaryImgUrl')
-  console.log('注销了')
-  console.log('函数外面的', diaryDetailMessage.value.diary_title)
-  DiaryTitle.value = diaryDetailMessage.value.diary_title
-  DiaryTime.value = diaryDetailMessage.value.diary_time
-  DiaryImgUrl.value = diaryDetailMessage.value.img_url
-  DiaryDiscribe.value = diaryDetailMessage.value.diary_discribe
-})
-
+import useDiaryData from '../diaryHooks/useDiaryData';
+const { getDiaryListById } = useDiaryData()
+const diaryItemMessage = getDiaryListById(String(param_id))
+if (diaryItemMessage) {
+  DiaryTitle.value = diaryItemMessage.diary_title
+  DiaryTime.value = diaryItemMessage.diary_time
+  DiaryDiscribe.value = diaryItemMessage.diary_discribe
+  DiaryImgUrl.value = diaryItemMessage.img_url
+}
 
 
 
-// emitter.on('sentDiaryImgUrl', (value: any) => {
-//   console.log('sendSliderNewValue被触发', value)
-
-// })
 
 
 

@@ -32,7 +32,7 @@ interface ParagraphInterface {
 
 const paragraphList: ParagraphInterface[] = [
   { id: 'J-Pieree01', content: 'Too many interesting things to learn,too few time.', source: 'J-Pierre', link: 'https://v.douyin.com/iAK1n1WY/ 5@8.com :8pm' },
-  { id: 'J-Pieree02', content: '不是我配不上这个时代,就是这个时代配不上我。', source: 'J-Pierre', link: 'https://v.douyin.com/iAK1n1WY/ 5@8.com :8pm' },
+  { id: 'gem01', content: '若是晨风还没来，晚风也可吹入怀。', source: '《若月亮还没来》', link: 'https://baike.baidu.com/item/%E8%8B%A5%E6%9C%88%E4%BA%AE%E6%B2%A1%E6%9D%A5/64384473' },
   { id: 'J-Pieree03', content: '只有当目标是探求真理的时候,科学才会真正的发生。', source: 'J-Pierre', link: 'https://v.douyin.com/iAK1n1WY/ 5@8.com :8pm' },
   { id: 'Yan01', content: '只要想念，就会相见。', source: '《十日终焉》', link: 'https://baike.baidu.com/item/%E5%8D%81%E6%97%A5%E7%BB%88%E7%84%89/63368747' },
   { id: 'Yan01', content: '宇宙很大，生活更大。', source: '《三体》', link: 'https://baike.baidu.com/item/%E4%B8%89%E4%BD%93/5739303' },
