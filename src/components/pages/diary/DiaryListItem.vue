@@ -8,8 +8,8 @@
     <div class="paragraph_container">
       <div class="text_container">
         <h3 @click="toDiaryLink(diaryMessage.route_link)">{{ diaryMessage.diary_title }}</h3>
-        <span class="time_str">{{ diaryMessage.diary_time }}</span>
-        <span class="time_str">&nbsp;&nbsp;Aa:{{ diaryMessage.str_num }}</span>
+        <p class="time_str">{{ diaryMessage.diary_time }}</p>
+        <p class="time_str">Aa:{{ diaryMessage.str_num }}</p>
         <p class="discribe">{{ diaryMessage.diary_discribe }}</p>
         <div class="rate_container">
           <el-rate void-color="white" :colors='colors' size="small" v-model="value" class="rate" />
@@ -101,10 +101,11 @@ function toDiaryLink(path: any) {
 
 .text_container .time_str {
   font-size: 0.75rem;
+  margin-top: 0.2rem;
 }
 
 .text_container .discribe {
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   font-size: 1.25rem;
 }
 
