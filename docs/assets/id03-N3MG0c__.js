@@ -50,7 +50,9 @@ Element Plus：[一个 Vue 3 UI 框架 | Element Plus](https://element-plus.org/
 \r
 r-swiper：[r-swiper: r-swiper vue3版本](https://gitee.com/yan_wen_ran/r-swiper)\r
 \r
-uiverse[uiverse: 大量原生css组件库](https://uiverse.io/)\r
+uiverse：[uiverse: 大量原生css组件库](https://uiverse.io/)\r
+\r
+阿里巴巴矢量图标库：[阿里巴巴矢量图标库](https://www.iconfont.cn/)\r
 \r
 ### 3.3 资源引用\r
 \r

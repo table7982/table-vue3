@@ -9,6 +9,7 @@
       <div class="text_container">
         <h3 @click="toDiaryLink(diaryMessage.route_link)">{{ diaryMessage.diary_title }}</h3>
         <span class="time_str">{{ diaryMessage.diary_time }}</span>
+        <span class="time_str">&nbsp;&nbsp;Aa:{{ diaryMessage.str_num }}</span>
         <p class="discribe">{{ diaryMessage.diary_discribe }}</p>
         <div class="rate_container">
           <el-rate void-color="white" :colors='colors' size="small" v-model="value" class="rate" />
