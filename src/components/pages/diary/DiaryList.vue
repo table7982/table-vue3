@@ -1,7 +1,7 @@
 <template>
   <Header />
 
-  <Head title="小小日记" />
+  <Head title="小小记录" />
   <DiaryListItem :diaryMessage='DiaryList[0]' />
   <DiaryListItem :diaryMessage='DiaryList[1]' />
   <DiaryListItem :diaryMessage='DiaryList[2]' />
