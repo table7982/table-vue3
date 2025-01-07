@@ -89,7 +89,7 @@
 }
 
 .linksLogo {
-  width: 30%;
+  width: 50%;
   margin: 1rem auto;
   display: flex;
   justify-content: space-around;
