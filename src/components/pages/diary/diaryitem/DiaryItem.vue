@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <backgroundMusic />
 
   <Head :title="DiaryTitle" />
   <br>
@@ -25,6 +26,7 @@ import { useRoute } from 'vue-router';
 import MarkdownIt from 'markdown-it';
 import 'github-markdown-css';
 import { ref, onMounted, watch } from 'vue';
+import backgroundMusic from '@/components/music/backGroundMusic.vue';
 
 const route = useRoute();
 const param_id = route.params.id;

@@ -35,8 +35,18 @@ const router = createRouter({
       // name: 'diaryitem',
       path: '/diaryitem/:id',
       component: DiaryItem,
-    }
+    },
 
-  ]
+
+  ],
+
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  }
+
 })
 export default router

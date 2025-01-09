@@ -43,8 +43,7 @@
           <p>Github</p>
         </a>
       </div>
-      <div class="whiteLine">
-      </div>
+      <hr class="whiteLine">
       <img src="../../../../static/logo_white.png" alt="logo" class="logoBottom">
 
     </div>
@@ -79,9 +78,13 @@
 
 .whiteLine {
   margin: 1rem auto;
-  height: 0.01rem;
   width: 80%;
+  height: 0.5px;
+  /* 设置高度 */
   background-color: white;
+  /* 设置背景颜色为红色 */
+  border: 0;
+  /* 移除边框 */
 }
 
 .logoBottom {

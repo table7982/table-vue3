@@ -47,7 +47,7 @@ const props: any = defineProps({
 
 let spaceListItemF = props.spaceListItem[0]
 let spaceListItemS = props.spaceListItem[1]
-console.log(spaceListItemF)
+// console.log(spaceListItemF)
 </script>
 
 <style scoped>

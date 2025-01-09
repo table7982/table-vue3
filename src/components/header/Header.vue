@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav" @mouseleave="leaveEvent" @mouseenter="enterEvent">
     <div :class="{ 'nav-bar': true }">
       <div @click="changeSituation" id="nav_bar_id" :class="{ 'nav-bar-active': if_active }">&#9776;</div>
     </div>
@@ -39,6 +39,23 @@ function changeSituation() {
     if_active.value = 0
   }
 }
+
+
+let timeoutId: number
+function leaveEvent() {
+  if (if_active.value === 1) {
+    timeoutId = setTimeout(() => {
+      if_active.value = 0
+    }, 500); // 延迟2秒执行
+  }
+}
+
+function enterEvent() {
+  if (if_active.value === 1) {
+    clearTimeout(timeoutId)
+  }
+}
+
 
 </script>
 <style scoped>
@@ -96,8 +113,6 @@ function changeSituation() {
 
 .link-style {
   color: #ffffff;
-
-
 }
 
 .text:hover {
