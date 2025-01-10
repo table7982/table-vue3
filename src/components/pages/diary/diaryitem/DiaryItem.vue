@@ -15,6 +15,7 @@
 
   </el-image> -->
   <div v-html="ref_result" class="markdown-body" style="font-size:medium"></div>
+  <IndexEnd />
 </template>
 
 
@@ -27,7 +28,7 @@ import MarkdownIt from 'markdown-it';
 import 'github-markdown-css';
 import { ref, onMounted, watch } from 'vue';
 import backgroundMusic from '@/components/music/backGroundMusic.vue';
-
+import IndexEnd from '@/components/index/IndexEnd/IndexEnd.vue';
 const route = useRoute();
 const param_id = route.params.id;
 
@@ -46,12 +47,14 @@ async function loadAndRenderMarkdown() {
     const mdContent = mod;
     const renderer = new MarkdownIt();
     ref_result.value = renderer.render(mdContent);
+    // console.log(ref_result.value)
+
   } else {
     console.log('指定的Markdown文件不存在');
-    ref_result.value = '指定的Markdown文件不存在';
+    ref_result.value = '敬请期待哦！！！';
   }
 }
-console.log(0)
+// console.log(0)
 
 
 
@@ -95,6 +98,8 @@ if (diaryItemMessage) {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
+
+
 
 @media (max-width: 767px) {
   .markdown-body {

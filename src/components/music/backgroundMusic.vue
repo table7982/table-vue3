@@ -28,8 +28,6 @@
           fill="white" p-id="12539"></path>
       </svg>
     </div>
-
-
   </div>
 
 </template>
@@ -105,7 +103,7 @@ watch(isPlaying, (new_isPlaying) => {
   height: 11rem;
   /* background-color: pink; */
   position: fixed;
-  bottom: 9rem;
+  bottom: 10rem;
   right: 2rem;
   z-index: 1000;
 }
@@ -121,7 +119,7 @@ watch(isPlaying, (new_isPlaying) => {
   margin: 0 auto;
   padding: .5rem;
   width: 60%;
-  height: 10rem;
+  height: 11rem;
   background-color: black;
   border-radius: .5rem;
 

@@ -58,6 +58,7 @@
 
 <style scoped>
 .endConrainer {
+  border-top: 0.1rem solid white;
   width: 100%;
   height: 20rem;
   background-color: black;
