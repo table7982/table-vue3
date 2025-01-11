@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <backgroundMusic />
+  <backgroundMusic :music_url_props="param_id" />
 
   <Head :title="DiaryTitle" />
   <br>
@@ -31,7 +31,7 @@ import backgroundMusic from '@/components/music/backGroundMusic.vue';
 import IndexEnd from '@/components/index/IndexEnd/IndexEnd.vue';
 const route = useRoute();
 const param_id = route.params.id;
-
+console.log(param_id)
 // 使用ref创建一个响应式变量来存储结果
 const ref_result = ref<string | null>(null);
 

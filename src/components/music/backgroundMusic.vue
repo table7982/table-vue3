@@ -37,13 +37,19 @@
 <script setup lang='ts' name='backgroundMusic'>
 import { el } from 'element-plus/es/locales.mjs';
 import { onMounted, ref, watch } from 'vue';
+import { defineProps } from 'vue';
+const routeID = defineProps(['music_url_props']);
 
-// const musicUrl = new URL('../../static/music/su_music.mp3', import.meta.url).href
-const musicUrl = 'music/su_music.mp3'
-console.log(musicUrl)
+console.log('routeID', routeID.music_url_props)
 
+const music_rule: any = {
+  'id03': 'music/org_bgm.mp3',
+  'id02': 'music/su_music.mp3',
+  'id01': 'music/su_music.mp3',
+}
+console.log('musicUrl', music_rule[routeID.music_url_props])
+const musicUrl = music_rule[routeID.music_url_props]
 const audioPlayer = ref<HTMLAudioElement | null>(null);
-console.log(audioPlayer.value)
 const isPlaying = ref(false);
 
 const handlePlay = () => {
@@ -103,7 +109,7 @@ watch(isPlaying, (new_isPlaying) => {
   height: 11rem;
   /* background-color: pink; */
   position: fixed;
-  bottom: 10rem;
+  bottom: 12rem;
   right: 2rem;
   z-index: 1000;
 }
@@ -119,7 +125,7 @@ watch(isPlaying, (new_isPlaying) => {
   margin: 0 auto;
   padding: .5rem;
   width: 60%;
-  height: 11rem;
+  height: 12.5rem;
   background-color: black;
   border-radius: .5rem;
 
@@ -131,7 +137,7 @@ watch(isPlaying, (new_isPlaying) => {
   writing-mode: vertical-rl;
   margin: auto auto;
   letter-spacing: .1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   opacity: 1;
 
 }
