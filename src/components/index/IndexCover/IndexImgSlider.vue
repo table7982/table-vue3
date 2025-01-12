@@ -16,7 +16,8 @@
       <el-carousel-item>
         <div class="container moveContainer1">
           <div class="cover" id="cover1"></div>
-          <img src="../../../../static/SuPicture.jpg" alt="移动图片" class="parallax-img moveImg1" id="SuPicture" />
+          <img src="../../../../public/picture/about_design/about_design_cover.png" alt="关于设计"
+            class="parallax-img moveImg1" id="SuPicture" />
         </div>
       </el-carousel-item>
 

@@ -35,20 +35,24 @@
 
 
 <script setup lang='ts' name='backgroundMusic'>
-import { el } from 'element-plus/es/locales.mjs';
+// import { el } from 'element-plus/es/locales.mjs';
 import { onMounted, ref, watch } from 'vue';
 import { defineProps } from 'vue';
 const routeID = defineProps(['music_url_props']);
 
 console.log('routeID', routeID.music_url_props)
+import useDiaryData from '../pages/diary/diaryHooks/useDiaryData';
+const { getDiaryListById } = useDiaryData()
 
-const music_rule: any = {
-  'id03': 'music/org_bgm.mp3',
-  'id02': 'music/su_music.mp3',
-  'id01': 'music/su_music.mp3',
-}
-console.log('musicUrl', music_rule[routeID.music_url_props])
-const musicUrl = music_rule[routeID.music_url_props]
+const DiaryMessageObject = getDiaryListById(routeID.music_url_props)
+// console.log('1234', DiaryMessageObject['music_url'])
+// const music_rule: any = {
+//   'id03': 'music/org_bgm.mp3',
+//   'id02': 'music/su_music.mp3',
+//   'id01': 'music/su_music.mp3',
+// }
+// console.log('musicUrl', music_rule[routeID.music_url_props])
+const musicUrl = DiaryMessageObject['music_url']
 const audioPlayer = ref<HTMLAudioElement | null>(null);
 const isPlaying = ref(false);
 
