@@ -1,4 +1,5 @@
 <template>
+  <nian></nian>
   <Header class="HeaderTop" />
   <IndexCover />
   <IndexCardsContainer />
@@ -10,6 +11,7 @@ import IndexCover from './IndexCover/IndexCover.vue'
 import IndexCardsContainer from './IndexCards/IndexCardsContainer.vue';
 import Header from '../header/Header.vue';
 import IndexEnd from './IndexEnd/IndexEnd.vue';
+import nian from './nian/nian.vue';
 </script>
 
 <style scoped>

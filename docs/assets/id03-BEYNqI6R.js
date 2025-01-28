@@ -54,6 +54,8 @@ uiverse：[uiverse: 大量原生css组件库](https://uiverse.io/)\r
 \r
 阿里巴巴矢量图标库：[阿里巴巴矢量图标库](https://www.iconfont.cn/)\r
 \r
+Happy New Year 2025：[新年动画](https://codepen.io/uiswarup/pen/JjojQby)\r
+\r
 ### 3.3 资源引用\r
 \r
 《三体》——刘慈欣\r
