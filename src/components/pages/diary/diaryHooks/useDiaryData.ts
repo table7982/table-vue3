@@ -26,10 +26,10 @@ export default function () {
     },
     {
       diary_id: 'id01',
-      diary_title: '关于设计',
+      diary_title: '误入设计',
       img_url: 'picture/about_design/about_design_cover.png',
-      diary_time: '2025年 7月 1日 星期二',
-      diary_discribe: '什么是好的设计？',
+      diary_time: '2024年 12月 27日 星期五',
+      diary_discribe: '理科生“误入”设计行业。',
       route_link: '/diaryitem/id01',
       str_num: 0,
       music_url: 'music/Fractures.mp3',
