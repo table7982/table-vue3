@@ -31,7 +31,17 @@ export default function () {
       diary_time: '2024年 12月 27日 星期五',
       diary_discribe: '理科生“误入”设计行业。',
       route_link: '/diaryitem/id01',
-      str_num: 0,
+      str_num: 3043,
+      music_url: 'music/Fractures.mp3',
+    },
+    {
+      diary_id: 'ShanDong_travel_Day1',
+      diary_title: '山东之旅—山大行',
+      img_url: 'picture/ShanDong_travel/Day1/ShanDong_university.jpg',
+      diary_time: '2024年 12月 29日 星期日',
+      diary_discribe: '落地济南，夜游山大；学无止境，气有浩然！',
+      route_link: '/diaryitem/ShanDong_travel_Day1',
+      str_num: 900,
       music_url: 'music/Fractures.mp3',
     },
   ]

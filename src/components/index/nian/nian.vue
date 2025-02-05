@@ -896,6 +896,8 @@
 </template>
 
 <script setup lang='ts' name='nian'>
+
+import anime from 'animejs/lib/anime.es.js';
 function close_nian() {
   let nian_idTs: any = document.querySelector('.nian_container')
   console.log(nian_idTs)
