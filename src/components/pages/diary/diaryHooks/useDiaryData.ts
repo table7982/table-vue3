@@ -42,7 +42,17 @@ export default function () {
       diary_discribe: '落地济南，夜游山大；学无止境，气有浩然！',
       route_link: '/diaryitem/ShanDong_travel_Day1',
       str_num: 900,
-      music_url: 'music/Fractures.mp3',
+      music_url: 'music/counting_stars.mp3',
+    },
+    {
+      diary_id: 'ShanDong_travel_Day2',
+      diary_title: '山东之旅—大明湖',
+      img_url: 'picture/ShanDong_travel/Day2/ChaoRan_building.jpg',
+      diary_time: '2024年 12月 30日 星期一',
+      diary_discribe: '日落千佛山，夜游大明湖。',
+      route_link: '/diaryitem/ShanDong_travel_Day2',
+      str_num: 847,
+      music_url: 'music/counting_stars.mp3',
     },
   ]
 
