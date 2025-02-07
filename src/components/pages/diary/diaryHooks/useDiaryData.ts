@@ -54,6 +54,17 @@ export default function () {
       str_num: 847,
       music_url: 'music/counting_stars.mp3',
     },
+    {
+      diary_id: 'ShanDong_travel_Day3',
+      diary_title: '山东之旅—跨年',
+      img_url: 'picture/ShanDong_travel/Day3/fly_balloon_rotate.jpg',
+      diary_time: '2024年 12月 31日 星期二',
+      diary_discribe: '泉城广场，万人跨年。',
+      route_link: '/diaryitem/ShanDong_travel_Day3',
+      str_num: 1190,
+      music_url: 'music/counting_stars.mp3',
+    },
+
   ]
 
 

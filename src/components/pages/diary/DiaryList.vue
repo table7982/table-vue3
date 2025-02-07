@@ -7,6 +7,7 @@
   <DiaryListItem :diaryMessage='DiaryList[2]' />
   <DiaryListItem :diaryMessage='DiaryList[3]' />
   <DiaryListItem :diaryMessage='DiaryList[4]' />
+  <DiaryListItem :diaryMessage='DiaryList[5]' />
 </template>
 
 <script setup lang='ts' name='DiaryList'>
