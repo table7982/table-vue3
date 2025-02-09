@@ -101,7 +101,7 @@ export default function () {
       diary_discribe: '登绝顶，赏绝色。',
       route_link: '/diaryitem/ShanDong_travel_Day5b',
       str_num: 1388,
-      music_url: 'music/counting_stars.mp3',
+      music_url: 'music/she.m4s',
     },
   ]
 
