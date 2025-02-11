@@ -26,7 +26,7 @@
 
 ![Bao_building](picture/ShanDong_travel/Day4/Bao_building.jpg)
 
-但是院子内部有很多那种非常艳丽的颜色构成的人造的动画图像，实在是与整体的原子弹气质不搭，显得相当突兀。
+但是院子内部有很多那种非常艳丽的颜色构成的人造的动画图像，实在是与整体的园子的气质不搭，显得相当突兀。
 
 ![Mis_put](picture/ShanDong_travel/Day4/Mis_put.jpg)
 

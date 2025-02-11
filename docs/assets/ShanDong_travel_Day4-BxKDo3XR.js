@@ -26,7 +26,7 @@ const n=`# 山东之旅—趵突泉\r
 \r
 ![Bao_building](picture/ShanDong_travel/Day4/Bao_building.jpg)\r
 \r
-但是院子内部有很多那种非常艳丽的颜色构成的人造的动画图像，实在是与整体的原子弹气质不搭，显得相当突兀。\r
+但是院子内部有很多那种非常艳丽的颜色构成的人造的动画图像，实在是与整体的园子的气质不搭，显得相当突兀。\r
 \r
 ![Mis_put](picture/ShanDong_travel/Day4/Mis_put.jpg)\r
 \r
@@ -40,4 +40,5 @@ const n=`# 山东之旅—趵突泉\r
 \r
 整个的场地不大，早早回到了旅店，好好睡一觉，准备好明日的泰山之行。\r
 \r
-第四天的山东之旅，结束。`;export{n as default};
+第四天的山东之旅，结束。\r
+`;export{n as default};
