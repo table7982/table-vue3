@@ -46,7 +46,7 @@ export default function () {
       diary_discribe: '落地济南，夜游山大；学无止境，气有浩然！',
       route_link: '/diaryitem/ShanDong_travel_Day1',
       str_num: 900,
-      music_url: 'music/counting_stars.mp3',
+      music_url: 'music/know_me.mp3',
     },
     {
       index: 4,
@@ -68,7 +68,7 @@ export default function () {
       diary_discribe: '泉城广场，万人跨年。',
       route_link: '/diaryitem/ShanDong_travel_Day3',
       str_num: 1190,
-      music_url: 'music/counting_stars.mp3',
+      music_url: 'music/Normal_No_More.mp3',
     },
     {
       index: 6,
@@ -79,7 +79,7 @@ export default function () {
       diary_discribe: '酒店惊魂，游览趵突泉。',
       route_link: '/diaryitem/ShanDong_travel_Day4',
       str_num: 808,
-      music_url: 'music/counting_stars.mp3',
+      music_url: 'music/she.mp3',
     },
     {
       index: 7,
@@ -90,7 +90,7 @@ export default function () {
       diary_discribe: '行至泰山，至中天门',
       route_link: '/diaryitem/ShanDong_travel_Day5a',
       str_num: 1250,
-      music_url: 'music/counting_stars.mp3',
+      music_url: 'music/League_of_Legends.mp3',
     },
     {
       index: 8,
@@ -101,7 +101,7 @@ export default function () {
       diary_discribe: '登绝顶，赏绝色。',
       route_link: '/diaryitem/ShanDong_travel_Day5b',
       str_num: 1388,
-      music_url: 'music/she.m4s',
+      music_url: 'music/Liquid_Cinema.mp3',
     },
   ]
 
