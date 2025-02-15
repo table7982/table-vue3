@@ -2,15 +2,10 @@
   <Header />
 
   <Head title="小小记录" />
-  <DiaryListItem :diaryMessage='DiaryList[0]' />
-  <DiaryListItem :diaryMessage='DiaryList[1]' />
-  <DiaryListItem :diaryMessage='DiaryList[2]' />
-  <DiaryListItem :diaryMessage='DiaryList[3]' />
-  <DiaryListItem :diaryMessage='DiaryList[4]' />
-  <DiaryListItem :diaryMessage='DiaryList[5]' />
-  <DiaryListItem :diaryMessage='DiaryList[6]' />
-  <DiaryListItem :diaryMessage='DiaryList[7]' />
-  <DiaryListItem :diaryMessage='DiaryList[8]' />
+  <div v-for="DiaryDataItem in DiaryList" :key="DiaryDataItem.id">
+    <DiaryListItem :diaryMessage='DiaryDataItem' />
+  </div>
+
 </template>
 
 <script setup lang='ts' name='DiaryList'>

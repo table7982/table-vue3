@@ -1,8 +1,8 @@
 <template>
   <div class="endConrainer">
     <div class="messageContainer">
-      <p>版本:2.0</p>
-      <p>修改日期:2025.01</p>
+      <p>版本:2.1</p>
+      <p>修改日期:2025.02</p>
       <p>作者:TABLE</p>
       <p>联系方式:table7982@gmail.com</p>
 

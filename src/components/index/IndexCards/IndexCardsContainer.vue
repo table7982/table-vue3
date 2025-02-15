@@ -17,7 +17,7 @@ const spaceList = [
   ],
   [
     { title: '我的记录', englishTitle: 'my notes', backTitle: '小小记录', backDiscribe: '随便写写', btnLink: '/diarylist' },
-    { title: '敬请期待', englishTitle: 'my tracks', backTitle: '敬请期待', backDiscribe: '敬请期待', btnLink: '/link' }
+    { title: '瞎想遐想', englishTitle: 'my thinking', backTitle: '小小思考', backDiscribe: '随便想想', btnLink: '/thinking' }
   ],
 
 ]

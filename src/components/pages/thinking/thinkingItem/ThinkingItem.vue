@@ -1,15 +1,15 @@
 <template>
   <Header />
-  <backgroundMusic :music_url_props="DiaryMusicUrl" />
+  <backgroundMusic :music_url_props="ThinkingMusicUrl" />
 
-  <Head :title="DiaryTitle" />
+  <Head :title="ThinkingTitle" />
   <br>
   <!-- <img :src="DiaryImgUrl" alt="" class="coverImg"> -->
   <div class="markdown-body">
-    <el-image style="width: 100%; " :src="DiaryImgUrl" fit="fill" />
-    {{ DiaryTime }}
+    <el-image style="width: 100%; " :src="ThinkingImgUrl" fit="fill" />
+    {{ ThinkingTime }}
     <br>
-    {{ DiaryDiscribe }}
+    {{ ThinkingDiscribe }}
   </div>
   <!-- <el-image loading="lazy" :src="">
 
@@ -19,7 +19,7 @@
 </template>
 
 
-<script setup lang='ts' name='DiaryItem'>
+<script setup lang='ts' name='ThinkingItem'>
 
 import Header from '@/components/header/Header.vue';
 import Head from '@/components/header/Head.vue';
@@ -29,6 +29,7 @@ import 'github-markdown-css';
 import { ref, onMounted, watch } from 'vue';
 import backgroundMusic from '@/components/music/backGroundMusic.vue';
 import IndexEnd from '@/components/index/IndexEnd/IndexEnd.vue';
+import useThinkingData from '../thinkinghooks/useThinkingData';
 const route = useRoute();
 const param_id = route.params.id;
 console.log(param_id)
@@ -38,10 +39,10 @@ const ref_result = ref<string | null>(null);
 // 创建一个async函数来加载和渲染Markdown
 async function loadAndRenderMarkdown() {
   const param_id_string = String(param_id);
-  const full_path = `./md_diary/${param_id_string}.md`;
+  const full_path = `./my_thinking/${param_id_string}.md`;
 
-  const modules = import.meta.glob('./md_diary/**/*.md', { as: 'raw' });
-  console.log('modules', modules)
+  const modules = import.meta.glob('./my_thinking/**/*.md', { as: 'raw' });
+
   if (modules[full_path]) {
     // 等待异步模块加载完成
     const mod = await modules[full_path]();
@@ -67,24 +68,23 @@ onMounted(() => {
 
 const defaultImgUrl = new URL('../../../../../static/sliderMain.png', import.meta.url).href
 
-const DiaryTitle = ref('Hello!')
-const DiaryTime = ref('NICE2035')
-const DiaryImgUrl = ref(defaultImgUrl)
-const DiaryDiscribe = ref('出现了一些问题哦~')
-const DiaryMusicUrl = ref('music/know_me.mp3')
+const ThinkingTitle = ref('Hello!')
+const ThinkingTime = ref('NICE2035')
+const ThinkingImgUrl = ref(defaultImgUrl)
+const ThinkingDiscribe = ref('出现了一些问题哦~')
+const ThinkingMusicUrl = ref('music/know_me.mp3')
 
+const { getThinkingListById } = useThinkingData()
+const thinkingItemMessage = getThinkingListById(String(param_id))
+if (thinkingItemMessage) {
+  ThinkingTitle.value = thinkingItemMessage.thinking_title
+  ThinkingTime.value = thinkingItemMessage.thinking_time
+  ThinkingDiscribe.value = thinkingItemMessage.thinking_discribe
+  ThinkingImgUrl.value = thinkingItemMessage.img_url
+  ThinkingMusicUrl.value = thinkingItemMessage.music_url
 
-import useDiaryData from '../diaryHooks/useDiaryData';
-const { getDiaryListById } = useDiaryData()
-const diaryItemMessage = getDiaryListById(String(param_id))
-if (diaryItemMessage) {
-  DiaryTitle.value = diaryItemMessage.diary_title
-  DiaryTime.value = diaryItemMessage.diary_time
-  DiaryDiscribe.value = diaryItemMessage.diary_discribe
-  DiaryImgUrl.value = diaryItemMessage.img_url
-  DiaryMusicUrl.value = diaryItemMessage.music_url
+  console.log(ThinkingImgUrl.value)
 }
-
 
 
 

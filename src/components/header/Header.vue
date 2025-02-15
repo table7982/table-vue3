@@ -20,6 +20,9 @@
         <RouterLink to="/diarylist" class="link-style">
           <p class="text">小小日记</p>
         </RouterLink>
+        <RouterLink to="/thinking" class="link-style">
+          <p class="text">小小思考</p>
+        </RouterLink>
       </div>
     </div>
   </div>

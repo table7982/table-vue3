@@ -5,7 +5,8 @@ import Link from '@/components/pages/link/Link.vue'
 import Index from '@/components/index/Index.vue'
 import DiaryList from '@/components/pages/diary/DiaryList.vue'
 import DiaryItem from '@/components/pages/diary/diaryitem/DiaryItem.vue'
-
+import Thinking from '@/components/pages/thinking/Thinking.vue'
+import ThinkingItem from '@/components/pages/thinking/thinkingItem/thinkingItem.vue'
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -35,6 +36,14 @@ const router = createRouter({
       // name: 'diaryitem',
       path: '/diaryitem/:id',
       component: DiaryItem,
+    },
+    {
+      path: '/thinking',
+      component: Thinking,
+    },
+    {
+      path: '/thinkingitem/:id',
+      component: ThinkingItem,
     },
 
 
