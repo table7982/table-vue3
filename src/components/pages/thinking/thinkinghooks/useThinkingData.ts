@@ -10,7 +10,7 @@ export default function () {
       thinking_discribe: '这是我的答案，我也想听听你的答案。',
       route_link: '/thinkingitem/life',
       str_num: 3438,
-      music_url: 'music/reverse.mp3',
+      music_url: 'music/Lifeline.mp3',
     },
 
   ]
