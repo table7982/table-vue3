@@ -5,12 +5,12 @@ export default function () {
       index: 0,
       thinking_id: 'life',
       thinking_title: '生命的意义',
-      img_url: 'picture/ShanDong_travel/Day1/ShanDong_university.jpg',
-      thinking_time: '2024年 12月 2日 星期一',
-      thinking_discribe: '还没写好哦！',
+      img_url: 'picture/thinking/point.png',
+      thinking_time: '2024年 2月 17日 星期一',
+      thinking_discribe: '这是我的答案，我也想听听你的答案。',
       route_link: '/thinkingitem/life',
-      str_num: 1093,
-      music_url: 'music/org_bgm.mp3',
+      str_num: 3438,
+      music_url: 'music/reverse.mp3',
     },
 
   ]
