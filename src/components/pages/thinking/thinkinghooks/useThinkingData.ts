@@ -12,7 +12,6 @@ export default function () {
       str_num: 3438,
       music_url: 'music/a_long_road.mp3',
     },
-
   ]
 
 
